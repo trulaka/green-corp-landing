@@ -5,11 +5,15 @@ body {
   }
 
 header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    padding-right: 40px;
+    padding: 10px;
+    padding-right: 40px; 
 }   
 
   .header__logo {
@@ -53,6 +57,7 @@ header {
   .about__sun-image {
     width: 120px;
     height: 120px;
+    position: absolute;
   }
 
   .about {
@@ -153,6 +158,7 @@ header {
     font-size: 18px;
     font-weight: 600;
     margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   select {
@@ -198,4 +204,61 @@ header {
 
   a {
     margin-bottom: 15px;
+  }
+
+  @media (min-width: 320px) and (max-width: 720px) {
+    .adapt {
+      padding: 10px;
+    }
+    header a, button {
+      font-size: 16px;
+    }
+    .header__logo {
+      height: 50px;
+    }
+    .about {
+      flex-direction: column;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .about, .form {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .form__container {
+      width: 300px;
+    }
+    .form input {
+      width: 260px;
+    }
+    .form select {
+      width: 300px;
+    }
+    /* h1 {
+      font-size: 36px;
+      line-height: 40px;
+    } */
+
+    .about h1, .form h1  {
+      font-size: 36px;
+      line-height: 40px;
+      }
+
+    .about__image {
+      width: 280px;
+    }
+
+    .about__sun-image {
+      width: 75px;
+      height: 75px;
+    }
+    .footer__container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer__group {
+      margin: 0;
+    }
   }
